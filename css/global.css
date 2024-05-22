@@ -101,3 +101,111 @@ nav{
     padding: 42px 41px;
     flex-shrink: 0;
 }
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333a3c;
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    font-family: 'Koulen';
+}
+.footer_container{
+    
+    display: flex;
+    float: left;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    height: 50px;
+    padding: 0 20px;
+
+}
+
+.footer_frame{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+.footer_frame ul li{
+    list-style-type: none;
+    display: inline;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+    flex-shrink: 0;
+}
+.footer_frame ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Koulen';
+}
+.footer_img_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 50px;
+    padding: 10px 20px;
+    flex-shrink: 0;
+}
+.footer_img_container img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+.footer_img_container #x{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+}
+.footer_img_container #x:hover{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+.footer_img_container img:hover{
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.quicklinks_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    padding: 10px 20px;
+    flex-shrink: 0;
+}
+
+.social_media_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 33.33%;
+    height: 50px;
+    padding: 10px 20px;
+    flex-shrink: 0;
+}
+.footer_bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+    height: 50px;
+    padding: 10px 20px;
+    flex-shrink: 0;
+}
