@@ -41,7 +41,7 @@ class Road{
             ctx.setLineDash([20,20]);
             ctx.beginPath();
             ctx.moveTo(x,this.top);
-            ctx.lineTo(x,this.bottom);
+            ctx.lineTo(x,this.bottom)
             ctx.stroke();
 
         }
