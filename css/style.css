@@ -1,3 +1,40 @@
-body{
-    background-image: url("C:\Users\a1197\Documents\GitHub\Challenge_Mahindra\img\depositphotos_588305106-stock-photo-final-race-2022-nyc-formula1.png");
+
+
+.main{
+    background-image: url(https://st.depositphotos.com/46435008/58830/i/450/depositphotos_588305124-stock-photo-final-race-2022-nyc-formula.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.main_hyperlinks_container{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 230px;
+    left: 150px;
+}
+
+.info_slider{
+    background-color: bisque;
+    height: 200px;
+    width: 70%;
+    position: absolute;
+    bottom: 50px;
+}
+
+.sidebar{
+    background-color: aquamarine;
+    height: 80%;
+    width: 30%;
+    display: flex;
+    position: absolute;
+    top: 130px;
+    right: 0;
+
 }

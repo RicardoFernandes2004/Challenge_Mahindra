@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    
-    line-height: normal;
-}
 
 nav{
     display: flex;
