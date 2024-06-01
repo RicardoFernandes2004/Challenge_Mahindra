@@ -99,6 +99,7 @@ nav{
 }
 
 footer{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: #333a3c;
