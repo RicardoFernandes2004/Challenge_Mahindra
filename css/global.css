@@ -3,10 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    
-    line-height: normal;
-}
 
 nav{
     display: flex;
@@ -103,6 +99,7 @@ nav{
 }
 
 footer{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     background-color: #333a3c;
