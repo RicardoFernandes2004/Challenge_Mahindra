@@ -1,4 +1,6 @@
-
+body{
+    background: #5A6E70;
+}
 
 .main{
     background-image: url(https://st.depositphotos.com/46435008/58830/i/450/depositphotos_588305124-stock-photo-final-race-2022-nyc-formula.jpg);
@@ -39,7 +41,7 @@
 
 .ranking{
     background: #283133;;
-    height: 673.912px;
+    height: 663px;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -172,4 +174,201 @@
     position: relative;
     bottom: 0;
     z-index: 1;
+}
+
+.problem{
+    background: #5A6E70;
+    height: 810px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Koulen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+}
+
+.problem_title{
+    background: #283133;
+    height: 15%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.problem_first_section_container{
+
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.problem_section1 p{
+
+    padding-left: 40px;
+    width: 600px;
+    height: 200px;
+    text-align: center;
+}
+
+.problem_section1 img{
+    width: 450px;
+    height: 300px;
+    padding-bottom: 50px;
+}
+
+.problem_text1{
+    width: 40%;
+    height: 80%;
+    background: #283133;
+    border-radius: 7px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: 32px;
+    line-height: 70px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.solution{
+    background: #283133;
+    height: 810px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Koulen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: #FFF;
+}
+
+.solution_header_container{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.solution_header_container > .solution_title, .solution_subtitle, .features{
+    background-color: #5A6E70;
+    margin: 20px;
+    height: 90px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 26px;
+}
+
+.solution_title{
+    width: 400px;
+}
+
+.solution_subtitle{
+    width: 800px;
+}
+
+.features{
+    width: 200px;
+}
+
+.features_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.features_container p{
+    width: 200px;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.reason{
+    display: flex;
+    width: 100%;
+    height: 810px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Koulen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.reason_title{
+    background: #283133;
+    height: 15%;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.reason_container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Koulen;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.reason_container div{
+    width: 400px;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.reason_text2{
+    background: #283133;
+
+    
 }
