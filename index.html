@@ -17,7 +17,39 @@
   <body>
 
     <!-- Hidden divs-->
+    <div id="coins" class="coins">
+        <div class="coins_container">
+            <div class="coins_frame">
+                <h2>Coins</h2>
+                <div class="coins_container">
+                    <img src="img\spinning_coin_gif_by_opalautumns_dd442co.gif" alt="">
+                    <p>0</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div id="profile" class="profile">
+        <div class="profile_quit">
+            <img id="quit_img" src="img\icone-x-bleue.png" alt="X">
+        </div>
+        <div class="profile_container">
+            <div class="profile_frame">
+                <h2>My Profile</h2>
+                <div class="profile_img_container">
+                    <img src="img/Ellipse 1.svg" alt="Profile Image">
+                </div>
+                <div class="profile_info_container">
+                    <p>Username: <span>John Doe</span></p>
+                    <p>Email: <span>Johndoe@gmail.com</span></p>
+                </div>
+            </div>
+            <div class="profile_settings">
+                <p>Log out</p>
+                <p>settings</p>
+            </div>
+        </div>
+    </div>
 
     <!-- End of hidden divs-->
 
@@ -44,8 +76,8 @@
                     <a href="#reason">Why does it works</a>
                 </div>
             </div>
-            <div class="my_profile_frame">
-                <img src="img/Polygon 1.svg" alt="">
+            <div id="my_profile_drawer" class="my_profile_frame">
+                <img id="coins_drawer" src="img/Polygon 1.svg" alt="">
                 <div class="hyperlink_rectangle">
                     <a href="#">My Profile</a>
                 </div>
@@ -68,14 +100,15 @@
                 <h1>About</h1>
                 <p>Mahindra Racing has competed in Formula E since its inception in 2014-2015. The team won its first race in 2016-2017 with Felix Rosenqvist. They focus on innovation and sustainability, aiming to win the championship and advance electric vehicle technology.</p>
                 <div class="info_slider_buttons_container">
-                    <img src="img/selected.svg" alt="selected">
-                    <img src="img/not selected frame.svg" alt="">
-                    <img src="img/not selected frame.svg" alt="">
+                    <button class="prev" onclick="prevSlide()">&#10094</button>
+                    <button class="next" onclick="nextSlide()">&#10095</button>
                 </div>
             </div>
             <div class="info_slider_images">
-                <img src="img/LogoMahindra2 1.png" alt="mahindra_logo">
-                <img src="img\fa97d2e7-02ca-4983-a930-4fdaa245a852 1.png" alt="mahindra_car">
+                <img class="mahindra_logo" src="img/LogoMahindra2 1.png" alt="mahindra_logo">
+                <img class="slide" src="img\fa97d2e7-02ca-4983-a930-4fdaa245a852 1.png" alt="mahindra_car">
+                <img class="slide" src="img\8bd68290-c0ad-43b6-a1ce-ee162b7d8914 1.png" alt="driver1">
+                <img class="slide" src="img\728b2253-b9d4-47dd-9051-e970bff2a62f 1.png" alt="driver2">
             </div>
         </div>
 
@@ -187,7 +220,8 @@
             <p>© 2024 TECHRAC-E Holdings Ltd. All rights reserved.</p>
         </section>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="js/displays.js"></script>
+    <script src="js/slider.js"></script>
     <script src="js/smoothroll.js"></script>
   </body>
 </html>
