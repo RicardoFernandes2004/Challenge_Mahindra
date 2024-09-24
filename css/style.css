@@ -2,30 +2,34 @@ body{
     background: #5A6E70;
 }
 
-.main{
+.main {
     background-image: url(https://st.depositphotos.com/46435008/58830/i/450/depositphotos_588305124-stock-photo-final-race-2022-nyc-formula.jpg);
     background-repeat: no-repeat;
     background-size: 80%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-position: left center;
+    display: grid;
+    grid-template-areas:
+        'links ranking'
+        'slider ranking';
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto;
+    /* position: relative; */
     height: 100vh;
     width: 100%;
 }
 
-.main_hyperlinks_container{
+.main_hyperlinks_container {
+    grid-area: links;
     height: 175px;
     width: 300px;
-    position: relative;
-    top: -20%;
-    left: 23%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.20);
     border-radius: 30px;
-
+    margin-top: 20%;
+    margin-left: 34%;
 }
 
 .main_hyperlinks_container a{
@@ -40,22 +44,28 @@ body{
     transition: 0.2s;
 }
 
+@media screen and (max-width: 1010px){
+    .main_hyperlinks_container{
+        margin-top: 60%;
+    }
+}
+
+
+
 .main_hyperlinks_container a:hover{
     color: #FFF;
 
 }
 
-.ranking{
-    background: #283133;;
-    height: 663px;
-    width: 30%;
+.ranking {
+    grid-area: ranking;
+    background: #283133;
+    height: 666px;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 130px;
-    right: 0;
     align-items: center;
-
+    margin-top: 130px;
 }
 
 .ranking_title_container{
@@ -115,14 +125,14 @@ body{
 }
 
 .info_slider {
+    grid-area: slider;
     background-color: #466266;
     height: 200px;
-    width: 70%;
-    position: absolute;
-    bottom: 50px;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-top: 168px;
 }
 
 .info_slider_option_container {
@@ -186,6 +196,152 @@ body{
     z-index: 0;
     display: flex;
 }
+
+
+/* Media Query para Dispositivos Móveis */
+@media (max-width: 768px) {
+    .main {
+      display: grid;
+      grid-template-areas:
+        'links ranking'
+        'slider slider'
+        ;
+
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 20px;
+      background-size: cover;
+      background-position: center top;
+      padding: 10px;
+      height: auto;
+    }
+  
+    .main_hyperlinks_container {
+      grid-area: links;
+      height: 150px;
+      width: 40%;
+      padding: 10px;
+      margin-top: 130%;
+      
+    }
+  
+    .main_hyperlinks_container a {
+      font-size: 24px;
+    }
+  
+  .info_slider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 180px; /* Ajuste conforme necessário */
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    position: static;
+  }
+
+  .info_slider_option_container,
+  .info_slider_images {
+    width: 48%;
+    margin: 0 1%;
+  }
+
+  .info_slider_option_container {
+    padding: 10px;
+  }
+
+  .info_slider_option_container h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .info_slider_option_container p {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+  }
+
+  .info_slider_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info_slider_images img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+  }
+  
+  .ranking {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 10px;
+    height: auto;
+    width: 100%;
+    margin-top: 90%;
+    padding: 10px;
+    position: static;
+  }
+  
+  .ranking_title_container,
+  .ranking_outer_rectangle,
+  .ranking_inner_rectangle {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .ranking_title_container {
+    margin-bottom: 10px;
+  }
+  
+  .ranking_inner_rectangle {
+    padding: 10px;
+  }
+  
+  .ranking_inner_rectangle ul li,
+  .ranking_inner_rectangle p {
+    font-size: 14px;
+  }
+  
+  }
+  @media screen and (max-width: 571px) {
+    .ranking{
+        margin-top: 110%;
+    }
+    .main_hyperlinks_container{
+        margin-top: 140%;
+    }
+  }
+
+@media (min-width: 769px) {
+    .ranking{
+        height: 85%;
+    }
+    .info_slider{
+        height: 400px;
+    }
+    .mahindra_logo {
+        right: 450px !important;
+        bottom: 150px !important;
+    }
+    .problem_text1 p{
+        font-size: 18px;
+        line-height: 50px;  
+    }
+    .problem_section1 p{
+        font-size: 18px;
+        line-height: 50px;
+    }
+}
+
+
 
 .problem{
     background: #5A6E70;
@@ -254,6 +410,9 @@ body{
     align-items: center;
     padding: 0 20px;
 }
+
+
+
 
 .solution{
     background: #283133;
@@ -426,4 +585,127 @@ img.display_slide{
 
 .info_slider_buttons_container button:hover{
     background-color: #466266;
+}
+@media (max-width: 768px) {
+    .problem, .solution, .reason {
+        font-size: 14px;
+        height: auto;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .problem_title, .solution_header_container > .solution_title, .solution_subtitle, .features, .reason_title {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .problem_section1 p, .features_container p {
+        font-size: 14px;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .problem_text1, .solution_header_container > .solution_title, .solution_subtitle {
+        width: 90%;
+        height: auto;
+        font-size: 18px;
+        line-height: 40px;
+        padding: 10px 15px;
+    }
+
+    .reason_title {
+        font-size: 16px;
+        width: 80%;
+        padding: 10px;
+    }
+
+    .reason_container div {
+        width: 80%;
+        height: auto;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .features_container p {
+        font-size: 14px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .problem_section1 img, .info_slider_images img:nth-child(2) {
+        width: 100%;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .info_slider_buttons_container button {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 370px) {
+    .problem, .solution, .reason {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .problem_title, .solution_header_container > .solution_title, .solution_subtitle, .features, .reason_title {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .problem_text1 {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .problem_section1 p, .features_container p {
+        font-size: 12px;
+        padding-left: 5px;
+    }
+
+    .problem_section1 img, .info_slider_images img:nth-child(2) {
+        width: 100%;
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .solution_header_container > .solution_title, .solution_subtitle {
+        font-size: 14px;
+    }
+
+    .features_container p {
+        font-size: 12px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .reason_title {
+        font-size: 12px;
+        padding: 5px;
+        width: 90%;
+    }
+
+    .reason_container div {
+        width: 90%;
+        height: auto;
+        font-size: 12px;
+        padding: 5px;
+    }
+
+    .info_slider_buttons_container button {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    .main_hyperlinks_container {
+        grid-area: links;
+        height: 150px;
+        width: 40%;
+        padding: 10px;
+        margin-top: 230%;
+        
+      }
 }
