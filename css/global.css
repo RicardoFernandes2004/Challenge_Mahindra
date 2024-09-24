@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+nav {
+    display: grid;
+    grid-template-areas: "logo links";
+    grid-template-columns: auto 1fr;
+    align-items: center;
     background-color: #333a3c;
     height: 130px;
+    padding: 0 20px;
     color: white;
     font-size: 20px;
     font-weight: 500;
@@ -19,206 +21,241 @@ nav{
     z-index: 1000;
 }
 
-nav a:hover{
-    color: #333a3c;
-    transition: 0.3s;
+.logo_container {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
 
+.hyperlink_container {
+    grid-area: links;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .formula-e {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 440px;
-    height: 130px;
     font-size: 48px;
+    color: white;
+    margin-right: 10px;
 }
-.image-1-icon {
-    position: absolute;
-    top: -1px;
-    left: 0px;
+
+.logo_container img {
     width: 128px;
-    height: 131px;
-    object-fit: cover;
-}
-.logo {
-    width: 100%;
-    position: relative;
-    height: 130px;
-    text-align: center;
-    font-size: 48px;
-    color: #fff;
-    font-family: Koulen;
+    height: auto;
 }
 
-.hyperlink_container{
+.hyperlink_frame {
+    margin-left: 20px;
+}
+
+.hyperlink_rectangle {
     display: flex;
-    float: right;
-    justify-content: space-between;
     align-items: center;
-    width: 1000px;
-    height: 130px;
-    padding: 0 20px;
-}
-
-.hyperlink_frame{
-    flex-shrink: 0;
-    display: flex;
-    width: 236px;
-    height: 130px;
-    padding: 42px 41px;
     justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    }
-
-.hyperlink_rectangle{
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
     width: 154px;
     height: 46px;
-    flex-shrink: 0;
-    border-radius: 16px;
     background: #14B7ED;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-    
-.hyperlink_container a{
+
+.hyperlink_rectangle a {
     color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: 500;
-    font-family: 'Koulen';
 }
 
-.my_profile_frame{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 236px;
-    height: 130px;
-    padding: 42px 41px;
-    flex-shrink: 0;
-}
-
-footer{
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    background-color: #333a3c;
-    color: white;
-    font-size: 16px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 50px;
-    font-family: 'Koulen';
-    z-index: 1000;
-}
-.footer_container{
-    
-    display: flex;
-    float: left;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    height: 50px;
-    padding: 0 20px;
-
-}
-
-.footer_frame{
-    font-size: 16px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    padding: 0 20px;
-    flex-shrink: 0;
-}
-.footer_frame ul li{
-    list-style-type: none;
-    display: inline;
-    width: 100%;
-    height: 50px;
-    padding: 0 10px;
-    flex-shrink: 0;
-}
-.footer_frame ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    font-family: 'Koulen';
-}
-footer ul li a:hover{
-    color: #14B7ED;
+nav a:hover {
+    color: #333a3c;
     transition: 0.3s;
 }
-.footer_img_container{
+
+.my_profile_frame {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 40%;
-    height: 50px;
-    padding: 10px 20px;
-    flex-shrink: 0;
-}
-.footer_img_container img{
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-}
-.footer_img_container #x{
-    width: 45px;
-    height: 45px;
-    object-fit: cover;
-}
-.footer_img_container #x:hover{
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-}
-.footer_img_container img:hover{
-    width: 35px;
-    height: 35px;
-    object-fit: cover;
+    margin-left: 20px;
 }
 
-.quicklinks_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    height: 50px;
-    padding: 10px 20px;
-    flex-shrink: 0;
+.my_profile_frame img {
+    width: 46px;
+    height: 46px;
+    margin: 0 5px;
 }
 
-.social_media_container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 33.33%;
-    height: 50px;
-    padding: 10px 20px;
-    flex-shrink: 0;
-}
-.footer_bottom{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 33.33%;
-    height: 50px;
-    padding: 10px 20px;
-    flex-shrink: 0;
-}
-
+/* Estilos gerais do footer */
+footer {
+    background-color: #333a3c;
+    color: white;
+    font-family: 'Koulen', sans-serif;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Estilos para desktop */
+  @media (min-width: 768px) {
+    footer {
+      position: fixed;
+      bottom: 0;
+      height: 50px;
+    }
+  
+    .footer_container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      padding: 0 20px;
+    }
+  
+    .social_media_container,
+    .footer_bottom,
+    .quicklinks_container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .footer_bottom {
+      /* Centraliza o texto no desktop */
+      justify-content: center;
+    }
+  
+    .footer_bottom p {
+      margin: 0;
+      font-size: 14px;
+    }
+  
+    .footer_frame {
+      display: flex;
+      align-items: center;
+    }
+  
+    .footer_frame h2 {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+  
+    /* Ícones de mídias sociais */
+    .footer_img_container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .footer_img_container a {
+      margin-right: 10px;
+    }
+  
+    .footer_img_container img {
+      width: 25px;
+      height: 25px;
+      transition: transform 0.3s;
+    }
+  
+    .footer_img_container img:hover {
+      transform: scale(1.2);
+    }
+  
+    /* Links rápidos */
+    .quicklinks_container ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .quicklinks_container li {
+      margin-right: 15px;
+    }
+  
+    .quicklinks_container a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  
+    .quicklinks_container a:hover {
+      color: #14B7ED;
+    }
+  }
+  
+/* Estilos para dispositivos móveis */
+@media (max-width: 767px) {
+    footer {
+      position: relative;
+      bottom: auto;
+      width: 100%; /* Certifica-se de que o footer tenha largura total */
+    }
+  
+    .footer_container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      width: 100%; /* Garante que o container ocupe 100% da largura */
+      box-sizing: border-box; /* Inclui o padding na largura total */
+    }
+  
+    .social_media_container,
+    .footer_bottom,
+    .quicklinks_container {
+      width: 100%; /* Cada seção ocupa 100% da largura */
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .footer_frame {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Garante que o frame ocupe toda a largura */
+    }
+  
+    .footer_img_container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; /* Permite que os ícones quebrem linha se necessário */
+      width: 100%; /* Ocupa toda a largura disponível */
+    }
+  
+    .footer_img_container a {
+      margin: 10px; /* Espaçamento entre os ícones */
+    }
+  
+    .footer_img_container img {
+      width: 35px;
+      height: 35px;
+    }
+  
+    .quicklinks_container ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+      width: 100%; /* Garante que a lista ocupe toda a largura */
+    }
+  
+    .quicklinks_container li {
+      margin-bottom: 10px;
+    }
+  
+    .quicklinks_container a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+  
+    .quicklinks_container a:hover {
+      color: #14B7ED;
+    }
+  
+    .footer_bottom p {
+      font-size: 14px;
+      margin: 0;
+    }
+  }
+  
+  
+  
 
 .coins{
     background-color: #333a3c;
@@ -320,4 +357,65 @@ footer ul li a:hover{
     color: #14B7ED;
     transition: 0.3s;
     cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .logo_container img {
+        width: 64px;
+    }
+
+    .formula-e {
+        font-size: 24px;
+    }
+    nav {
+        grid-template-areas:
+            "logo"
+            "links";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        justify-items: center; /* Centraliza os itens horizontalmente */
+        height: auto; /* Permite que a altura se ajuste ao conteúdo */
+        padding: 10px;
+    }
+
+    .hyperlink_container {
+        justify-content: center; /* Centraliza os links de navegação */
+        flex-wrap: wrap; /* Permite que os links quebrem linha se necessário */
+    }
+
+    .hyperlink_frame {
+        margin: 10px; /* Adiciona margem ao redor de cada link para espaçamento */
+    }
+
+    .hyperlink_rectangle {
+        width: 100%;
+        max-width: 200px; /* Limita a largura máxima */
+    }
+
+    .hyperlink_rectangle a {
+        font-size: 18px;
+    }
+}
+
+/* Ajustes responsivos para telas menores que 1175px */
+@media (max-width: 1175px) {
+    /* Reduz o tamanho da fonte do texto "TECHRAC-E" */
+    .formula-e {
+        font-size: 36px;
+    }
+
+    /* Reduz o tamanho da logo */
+    .logo_container img {
+        width: 100px;
+    }
+
+    /* Ajusta a largura dos botões de navegação */
+    .hyperlink_rectangle {
+        width: 140px;
+    }
+
+    /* Reduz o tamanho da fonte dos links de navegação */
+    .hyperlink_rectangle a {
+        font-size: 18px;
+    }
 }
