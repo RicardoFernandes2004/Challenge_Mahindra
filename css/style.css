@@ -127,7 +127,7 @@ body{
 .info_slider {
     grid-area: slider;
     background-color: #466266;
-    height: 200px;
+    height: 300px;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -324,9 +324,7 @@ body{
     .ranking{
         height: 85%;
     }
-    .info_slider{
-        height: 400px;
-    }
+
     .mahindra_logo {
         right: 450px !important;
         bottom: 150px !important;
