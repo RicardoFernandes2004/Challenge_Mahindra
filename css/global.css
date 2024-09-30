@@ -5,6 +5,7 @@
 }
 
 nav {
+    grid-area: navbar;
     display: grid;
     grid-template-areas: "logo links";
     grid-template-columns: auto 1fr;
@@ -86,6 +87,7 @@ nav a:hover {
 
 /* Estilos gerais do footer */
 footer {
+    grid-area: footer;
     background-color: #333a3c;
     color: white;
     font-family: 'Koulen', sans-serif;
