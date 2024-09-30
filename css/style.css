@@ -2,7 +2,24 @@ body{
     background: #5A6E70;
 }
 
+.containerAll{
+    display: grid;
+    grid-template-areas:
+        'navbar'
+        'header'
+        'main'
+        'problem'
+        'solution'
+        'reason'
+        'footer';
+    grid-template-columns: 100%;
+    grid-template-rows: 0 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+}
+
 .main {
+    grid-area: main;
     background-image: url(https://st.depositphotos.com/46435008/58830/i/450/depositphotos_588305124-stock-photo-final-race-2022-nyc-formula.jpg);
     background-repeat: no-repeat;
     background-size: 80%;
@@ -342,6 +359,7 @@ body{
 
 
 .problem{
+    grid-area: problem;
     background: #5A6E70;
     height: 810px;
     width: 100%;
@@ -413,6 +431,7 @@ body{
 
 
 .solution{
+    grid-area: solution;
     background: #283133;
     height: 810px;
     width: 100%;
@@ -488,6 +507,7 @@ body{
 }
 
 .reason{
+    grid-area: reason;
     display: flex;
     width: 100%;
     height: 810px;
